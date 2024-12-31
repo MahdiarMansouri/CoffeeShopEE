@@ -1,4 +1,4 @@
-package org.example.coffeeshopee.model.utils;
+package org.example.coffeeshopee.controller.interceptor.annotation;
 
 import jakarta.interceptor.InterceptorBinding;
 

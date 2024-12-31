@@ -28,7 +28,7 @@ public class User extends Base {
     @NotBlank(message = "username is empty!!!")
     private String username;
 
-    @Column(name = "password", length = 30, unique = true, nullable = false)
+    @Column(name = "password", length = 30,  nullable = false)
     @NotBlank(message = "password is empty!!!")
     private String password;
 

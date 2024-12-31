@@ -2,14 +2,13 @@ package org.example.coffeeshopee.model.service;
 
 
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.example.coffeeshopee.model.entity.InventoryTransaction;
-import org.example.coffeeshopee.model.utils.Loggable;
+import org.example.coffeeshopee.controller.interceptor.annotation.Loggable;
 
 import java.util.List;
 

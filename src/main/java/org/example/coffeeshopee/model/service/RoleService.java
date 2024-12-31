@@ -2,13 +2,13 @@ package org.example.coffeeshopee.model.service;
 
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.example.coffeeshopee.model.entity.Role;
-import org.example.coffeeshopee.model.utils.Loggable;
+import org.example.coffeeshopee.controller.interceptor.annotation.Loggable;
 
-import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
 import java.util.List;
 
 @RequestScoped
@@ -70,7 +70,8 @@ public class RoleService implements Service<Role, Long> {
     @Loggable
     @Override
     public List<Role> findAll() {
-        Query query = entityManager.createQuery("SELECT r FROM roleEntity r", Role.class);
+        Query query = null;
+        query = entityManager.createQuery("SELECT r FROM roleEntity r", Role.class);
         if (query.getResultList().size() > 0) {
             log.info("Roles found");
             return query.getResultList();

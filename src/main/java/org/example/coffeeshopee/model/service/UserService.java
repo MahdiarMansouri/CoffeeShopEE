@@ -8,9 +8,8 @@ import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.example.coffeeshopee.model.entity.Person;
-import org.example.coffeeshopee.model.entity.Role;
 import org.example.coffeeshopee.model.entity.User;
-import org.example.coffeeshopee.model.utils.Loggable;
+import org.example.coffeeshopee.controller.interceptor.annotation.Loggable;
 
 import java.util.List;
 
