@@ -32,6 +32,10 @@ public class User extends Base {
     @NotBlank(message = "password is empty!!!")
     private String password;
 
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER)
+    @JoinTable(name="person_users", foreignKey = @ForeignKey(name = "person_fk"))
+    private Person person;
+
     @OneToMany(cascade = {CascadeType.PERSIST}, fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "username"), inverseJoinColumns = @JoinColumn(name = "role_name"))
     private List<Role> roleList;

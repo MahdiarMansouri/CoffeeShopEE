@@ -20,6 +20,26 @@ public class RoleApi {
         log.info("Get roles");
         return roleService.findAll();
     }
+
+    @GET
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Loggable
+    public Object getRoleById(@PathParam("id") Long id) {
+        log.info("Get role by id ");
+        return roleService.findById(id);
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Loggable
+    public Object getRoles() {
+        log.info("Get roles");
+        return roleService.findAll();
+    }
+
+
+
 //    @POST
 //    @PUT
 //    @DELETE

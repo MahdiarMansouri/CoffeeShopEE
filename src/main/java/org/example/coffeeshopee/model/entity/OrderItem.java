@@ -21,6 +21,7 @@ public class OrderItem extends Base {
     private Long id;
 
     @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinColumn(name = "item_id", referencedColumnName = "item_id")
     private Item item;
 
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)

@@ -8,14 +8,14 @@ import org.example.coffeeshopee.model.entity.Permission;
 import org.example.coffeeshopee.model.service.RoleService;
 
 
-@Path("/test-role")
-@Slf4j
+//@Path("/test-role")
+//@Slf4j
 public class RoleApiTest {
-    @Inject
-    private RoleService roleService;
-
-    @GET
-    public String roleApiTest() {
-        log.info("roleApiTest");
-    }
+//    @Inject
+//    private RoleService roleService;
+//
+//    @GET
+//    public String roleApiTest() {
+//        log.info("roleApiTest");
+//    }
 }

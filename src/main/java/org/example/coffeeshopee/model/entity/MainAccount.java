@@ -11,13 +11,13 @@ import lombok.experimental.SuperBuilder;
 @Setter
 @SuperBuilder
 
-@Entity(name = "accountingEntity")
-@Table(name = "accounting_tbl")
-public class Accounting extends Base{
+@Entity(name = "mainAccountEntity")
+@Table(name = "main_account_tbl")
+public class MainAccount extends Base{
     @Id
-    @SequenceGenerator(name = "accountingSeq", sequenceName = "accounting_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountingSeq")
-    @Column(name = "accounting_id")
+    @SequenceGenerator(name = "mainAccountSeq", sequenceName = "main_account_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "mainAccountSeq")
+    @Column(name = "main_account_id")
     private Long id;
 
     @Column(name = "total_revenue")

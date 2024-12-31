@@ -51,8 +51,4 @@ public class Person extends Base {
     @Column(name = "person_gender", length = 6)
     @Enumerated(EnumType.ORDINAL)
     private Gender gender;
-
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH}, fetch = FetchType.EAGER)
-    @JoinTable(name="person_users", foreignKey = @ForeignKey(name = "user_fk"))
-    private User user;
 }

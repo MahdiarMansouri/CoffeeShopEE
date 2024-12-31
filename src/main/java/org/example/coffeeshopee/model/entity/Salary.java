@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 
 @Entity(name = "salaryEntity")
 @Table(name = "salary_tbl")
-public class Salary extends Base{
+public class Salary extends Base {
     @Id
     @SequenceGenerator(name = "salarySeq", sequenceName = "salary_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "salarySeq")
